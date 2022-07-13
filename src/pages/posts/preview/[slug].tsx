@@ -73,7 +73,7 @@ export const getStaticProps: GetStaticProps = async ({params}) => {
 
     const prismic = getPrismicClient()
 
-    const response = await prismic.getByUID('publication', String(slug), {})
+    const response = await prismic.getByUID('publication', String(slug), {}) as any;
 
     const post = {
         slug,
