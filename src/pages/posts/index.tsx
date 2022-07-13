@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps = async () => {
     ], {
         fetch: ['publication.title', 'publication.content'],
         pageSize: 100,
-    })
+    }) as any;
 
     const posts = response.results.map(post => {
         return {
